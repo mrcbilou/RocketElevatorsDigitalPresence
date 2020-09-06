@@ -1,15 +1,32 @@
-function displayQuestion(answer) {
 
-    document.getElementById(answer + 'Question').style.display = "block";
-  
-    if (answer == "yes") { // hide the div that is not selected
-  
-      document.getElementById('noQuestion').style.display = "none";
-  
-    } else if (answer == "no") {
-  
-      document.getElementById('yesQuestion').style.display = "none";
-  
+
+  function showDiv(select){
+    if(select.value==0){
+        document.getElementById("residential-form-group").style.display = "none";
+        document.getElementById("commercial-form-group").style.display = "none";
+        document.getElementById("corporate-form-group").style.display = "none";
+        document.getElementById("hybrid-form-group").style.display = "none";
     }
-  
-  }
+        
+   
+    if(select.value==1){
+     document.getElementById("residential-form-group").style.display = "block";
+    } else{
+     document.getElementById("residential-form-group").style.display = "none";
+    }  
+    if(select.value==2){
+        document.getElementById("commercial-form-group").style.display = "block";
+    } else{
+        document.getElementById("commercial-form-group").style.display = "none";
+    }
+        if(select.value==3){
+            document.getElementById("corporate-form-group").style.display = "block";
+        } else{
+            document.getElementById("corporate-form-group").style.display = "none";
+     }   if(select.value==4){
+        document.getElementById("hybrid-form-group").style.display = "block";
+    } else{
+        document.getElementById("hybrid-form-group").style.display = "none";
+ } 
+ } 
+ 
