@@ -193,7 +193,7 @@
 										<label for="input-building-type" class="col-form-label col-form-label-lg text-center">Select your Building Type</label>	
 
 											<select id="input-building-type" tabindex="5" onchange="showDiv(this)">
-												<option value="0" selected > Choose a Building Type</option>
+												<option value="0" selected disabled > Choose a Building Type</option>
 												<option value="1">Residential</option>
 												<option value="2">Commercial</option>
 												<option value="3">Corporate</option>
@@ -203,7 +203,7 @@
 				
 								</form>
 							</div>
-						<div id="residential-form-group">
+						<div id="residential-form-group" style="display:none">
 							<div class="pt-4" id="apartments-num">
 								<form>
 									<div class="container text-center">
@@ -237,7 +237,7 @@
 
 						</div>
 
-						<div id="commercial-form-group">
+						<div id="commercial-form-group" style="display:none">
 							<div class="pt-4" id="com-businesses-num">
 								<form>
 									<div class="container text-center">
@@ -291,7 +291,7 @@
 
 						</div>
 
-						<div id="corporate-form-group">
+						<div id="corporate-form-group" style="display:none">
 							<div class="pt-4" id="corp-company-num">
 								<form>
 									<div class="container text-center">
@@ -345,7 +345,7 @@
 
 						</div>
 
-						<div id="hybrid-form-group">
+						<div id="hybrid-form-group" style="display: none">
 							<div class="pt-4" id="hyb-business-num">
 								<form>
 									<div class="container text-center">
@@ -423,8 +423,46 @@
 					<center><input class="inputBox" id="lift-cage-num-estimate" type="integer"  placeholder="Estimated Number"  value="" style="width: 200px;" readonly></center>
 
 				</div>
+				<section>
+					<center><h2>Please Choose One Of Our Product Line</h2></center>
+					<div class="container text-center">
+						<input type="radio" id="standard-product" name="product-line" onchange="calculateTotalStandardEstimatedCost()" value="standard" checked>
+						<label for="standard-product"><strong>Standard</strong><br> 7565$/ unit, 10% installation Fees</label><br>
+						<input type="radio" id="premium-product" name="product-line" onchange="calculateTotalPremiumEstimatedCost()" value="premium">
+						<label for="premium-product"><strong>Premium</strong><br> 12 345$/ unit, 13% installation Fees</label><br>
+						<input type="radio" id="excelium-product" name="product-line" onchange="calculateTotalExcelEstimatedCost()" value="excelium">
+						<label for="excelium-product"><strong>Excelium</strong><br> 15 400$/ unit, 16% installation Fees </label><br>
+					</div>
 					
 
+					<br>
+
+					<div class="container text-center">
+						<label for="unit-price-show"  class="col-form-label col-form-label-lg text-center">Number of Elevator Needed Times Unit Price</label>
+						<center><input class="inputBox" id="unit-price-show" type="integer"  placeholder="Estimated Number"  value="" style="width: 200px;" readonly></center>
+	
+					</div>
+
+					
+					<br>
+
+					<div class="container text-center">
+						<label for="install-fee-show"  class="col-form-label col-form-label-lg text-center"> Installation Fees</label>
+						<center><input class="inputBox" id="install-fee-show" type="integer"  placeholder="Estimated Number"  value="" style="width: 200px;" readonly></center>
+	
+					</div>
+
+					
+					<br>
+
+					<div class="container text-center">
+						<label for="estimate-cost-show"  class="col-form-label col-form-label-lg text-center"> Your Total Estimated Cost</label>
+						<center><input class="inputBox" id="estimate-cost-show" type="integer"  placeholder="Estimated Number"  value="" style="width: 200px;" readonly></center>
+	
+					</div>
+					
+
+				</section>
 			</section>
 			
 			

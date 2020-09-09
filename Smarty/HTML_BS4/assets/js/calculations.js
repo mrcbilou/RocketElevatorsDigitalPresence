@@ -101,3 +101,58 @@ function calculateTotalCorpCage(){
 
 }
 
+//standard service calculation
+function calculateTotalEstimatedCost(){
+    var totalNumberElevatorCage = Math.round(parseInt(document.getElementById("lift-cage-num-estimate").value));
+    var standardUnitPrice = totalNumberElevatorCage * 7565;
+   
+    var standardInstallFee = standardUnitPrice * 0.1;
+    
+    var totalStandardPrice = standardUnitPrice + standardInstallFee;
+    
+        document.getElementById("unit-price-show").value = Math.round(standardUnitPrice) + "$";
+
+        document.getElementById("install-fee-show").value = Math.round(standardInstallFee) + "$";
+
+        document.getElementById("estimate-cost-show").value = Math.round(totalStandardPrice) + "$";
+       
+    
+}   
+//premium service installation
+function calculateTotalEstimatedCost(){
+    var totalNumberElevatorCage = Math.round(parseInt(document.getElementById("lift-cage-num-estimate").value));
+    
+    var premiumUnitPrice = totalNumberElevatorCage * 12345;
+    
+    var premiumInstallFee = premiumUnitPrice * 0.13;
+   
+    var totalPremiumPrice = premiumUnitPrice + premiumInstallFee;
+    
+        document.getElementById("unit-price-show").value = Math.round(premiumUnitPrice) + "$";
+
+        document.getElementById("install-fee-show").value = Math.round(premiumInstallFee) + "$";
+
+        document.getElementById("estimate-cost-show").value =Math.round(totalPremiumPrice) + "$";
+        
+    
+   
+}   
+// excelium service installation
+function calculateTotalExcelEstimatedCost(){
+    var totalNumberElevatorCage = Math.round(parseInt(document.getElementById("lift-cage-num-estimate").value));
+  
+    var exceliumUnitPrice = totalNumberElevatorCage * 15400;
+    
+    var exceliumInstallFee = exceliumUnitPrice * 0.16;
+
+    var totalExceliumPrice = exceliumUnitPrice + exceliumInstallFee;
+ 
+        document.getElementById("unit-price-show").value = Math.round(exceliumUnitPrice) + "$";
+
+        document.getElementById("install-fee-show").value = Math.round(exceliumInstallFee) + "$";
+
+        document.getElementById("estimate-cost-show").value =Math.round(totalExceliumPrice) + "$";
+
+        
+    
+}   
