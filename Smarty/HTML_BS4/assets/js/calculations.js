@@ -42,27 +42,11 @@ var comCagesNumber = parseInt(document.getElementById("input-com-cages-num").val
 
 //calculations variables
 
-var multipleOfSix = 6;
 
 
 // Functions
 
-// Residential Functions
-
-// calculating number of shafts based on average doors per floor rnfb
-
-
-let roundResCageNum = Math.round(parseInt(document.getElementById("input-res-app-number").value/6));
-let numFloorColumns = Math.round(parseInt(document.getElementById("input-res-floor-num").value/20)+1);
-
-
-
-
-let resTotalCageNum = roundResCageNum * numFloorColumns;
-
-
-
-
+// Residential Function
 
 function calculateTotalResCage() 
 {
@@ -71,18 +55,6 @@ function calculateTotalResCage()
 
     document.getElementById("lift-cage-num-estimate").value = resCageNum * numFloorColumns;
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -97,5 +69,35 @@ function getInputValue(){
 $("#input-com-cages-num").on("change", getInputValue);
 
 
+// Hybrid Function
+function calculateTotalHybCage(){
+    var hybTotalOccFloor = Math.round(parseInt(document.getElementById("input-hyb-occupant-num").value));
+    var hybFloorBuilding =  Math.round(parseInt(document.getElementById("input-hyb-floor-num").value));
+    var hybNumBasement = Math.round(parseInt(document.getElementById("input-hyb-basement-num").value)); 
+    var totalFloorsAndBasement = hybFloorBuilding + hybNumBasement;
+    var totalHybOccupants = hybTotalOccFloor * totalFloorsAndBasement;
+    var hybRequiredElevator = totalHybOccupants / 1000;
+    var hybNumColumns = totalFloorsAndBasement / 20;
+    var hybNumElevatorPerColumns = hybRequiredElevator / hybNumColumns;
+    var hybTotalNumberofElevator = hybNumElevatorPerColumns * hybNumColumns;
 
+    document.getElementById("lift-cage-num-estimate").value = Math.round(hybTotalNumberofElevator);
+
+}
+
+//Corporate Function
+function calculateTotalCorpCage(){
+    var totalOccFloor = Math.round(parseInt(document.getElementById("input-corp-occupant-num").value));
+    var corpFloorBuilding =  Math.round(parseInt(document.getElementById("input-corp-floor-num").value));
+    var corpNumBasement = Math.round(parseInt(document.getElementById("input-corp-basement-num").value)); 
+    var totalFloorsAndBasement = corpFloorBuilding + corpNumBasement;
+    var totalCorpOccupants = totalOccFloor * totalFloorsAndBasement;
+    var corpRequiredElevator = totalCorpOccupants / 1000;
+    var corpNumColumns = totalFloorsAndBasement / 20;
+    var corpNumElevatorPerColumns = corpRequiredElevator / corpNumColumns;
+    var corpTotalNumberofElevator = corpNumElevatorPerColumns * corpNumColumns;
+
+    document.getElementById("lift-cage-num-estimate").value = Math.round(corpTotalNumberofElevator);
+
+}
 
