@@ -3,39 +3,42 @@
 // RESIDENTIAL
 
 //residential number of appartements in the building
-var resNumberAp = $("#rnab").val();
+var resNumberAp = parseInt(document.getElementById("input-res-app-number").value);
 // residential number of floors in the building 
-var resFloorAp = $("#rnfb").val();
+var resFloorAp = parseInt(document.getElementById("input-res-floor-num").value);
 // residential number of basements in the building
-var resBaseAp = $("#rnbb").val();
+var resBaseAp = parseInt(document.getElementById("input-res-basement-num").value);
 
 //CORPORATE
 
 // number of separate tenant companies
-var corpNumCompanies = $("#cnstc").val();
+var corpNumCompanies =  parseInt(document.getElementById("input-corp-company-number").value);
 // number of floors in the building
-var corpFloorBuilding = $("#cnfb").val();
+var corpFloorBuilding =  parseInt(document.getElementById("input-corp-floor-num").value);
 // number of basement in the building
-var corpNumBasement = $("#cnbb").val();
+var corpNumBasement = parseInt(document.getElementById("input-corp-basement-num").value);
 // number of total available parking space
-var corpParkSpace = $("#caps").val();
+var corpParkSpace = parseInt(document.getElementById("input-corp-parking-num").value);
 // maximum number of occupants per floor
-var corpMaxOccup = $("#cnof").val();
+var corpMaxOccup = parseInt(document.getElementById("input-corp-occupant-num").value);
 
 // HYBRID
 
 // number of distinct businesses
-var hybDisBusiness = $("#hdbb").val();
+var hybDisBusiness = parseInt(document.getElementById("input-hyb-business-number").value);
 // number of floors in the building
-var hybNumFloor = $("#hnfb").val();
+var hybNumFloor = parseInt(document.getElementById("input-hyb-floor-num").value);
 // number of basements in the building
-var hybNumBasement = $("#hnbb").val();
+var hybNumBasement = parseInt(document.getElementById("input-hyb-basement-num").value);
 // total available parking space
-var hybParkSpace = $("#hpsb").val();
+var hybParkSpace = parseInt(document.getElementById("input-hyb-parking-num").value);
 // maximum number of occupants per floor
-var hybMaxOccup = $("#hofb").val();
+var hybMaxOccup = parseInt(document.getElementById("input-hyb-occupant-num").value);
 // total hours of activity in the building
-var hybTotalActivityHours = $("#hhab").val();
+var hybTotalActivityHours = parseInt(document.getElementById("input-hyb-active-time-num").value);
+
+// commercial number of lift cages
+var comCagesNumber = parseInt(document.getElementById("input-com-cages-num").value);
 
 //calculations variables
 
@@ -49,32 +52,25 @@ var multipleOfSix = 6;
 // calculating number of shafts based on average doors per floor rnfb
 
 
+let roundResCageNum = Math.round(parseInt(document.getElementById("input-res-app-number").value/6));
+let numFloorColumns = Math.round(parseInt(document.getElementById("input-res-floor-num").value/20)+1);
 
-var numberColumn = Math.floor(resFloorAp / 20) + 1;
 
-function resCalcEst(){
-    var resNumberAp = document.getElementById("rnab").value;
-    var resFloorAp = document.getElementById("rnfb").value;
-    var numberColumn = Math.floor(resFloorAp / 20) + 1;
-    var numShafts = Math.ceil(resNumberAp / 6);
-    var resCageTotal = parseInt(numShafts,10)*parseInt(numberColumn,10);
 
-  
-    
 
-    document.getElementById("cage-num-estimate").value(resCalcEst);
-    console.log(resCalcEst);
-if (numShafts >= 2) {
-    Math.ceil(numShafts);
+let resTotalCageNum = roundResCageNum * numFloorColumns;
 
+
+
+
+
+function calculateTotalResCage() 
+{
+    var resCageNum = Math.round(parseInt(document.getElementById("input-res-app-number").value/6));
+    var numFloorColumns =  Math.round(parseInt(document.getElementById("input-res-floor-num").value/20)+1);
+
+    document.getElementById("lift-cage-num-estimate").value = resCageNum * numFloorColumns;
 }
-
-return numShafts*numberColumn;
-
-}
-
-
-
 
 
 
@@ -92,14 +88,13 @@ return numShafts*numberColumn;
 
 // Commercial Functions
 function getInputValue(){
-    var inputVal = $("#com-cage-num").val();
+    var inputVal = $("#input-com-cages-num").val();
     var numberCage = parseInt(inputVal,10);
-    $("#cage-num-estimate").val(numberCage);
+    $("#lift-cage-num-estimate").val(numberCage);
 }
 
 
-$("#com-cage-num").on("change", getInputValue);
-
+$("#input-com-cages-num").on("change", getInputValue);
 
 
 
