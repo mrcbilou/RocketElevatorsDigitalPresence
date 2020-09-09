@@ -208,7 +208,7 @@
 								<form>
 									<div class="container text-center">
 										<label for="input-app-number" class="col-form-label col-form-label-lg text-center">Number of Apartments in the Building</label>	
-											<center><input class="form-control" type="integer" placeholder="Add number" style="width: 200px;"></center>
+											<center><input class="form-control" type="integer" placeholder="Add number" id="rnab" style="width: 200px;"></center>
 										
 										</div>
 				
@@ -218,7 +218,7 @@
 								<form>
 									<div class="container text-center">
 										<label for="input-res-floor-num" class="col-form-label col-form-label-lg text-center">Number of Floors in the Building</label>	
-											<center><input class="form-control" type="integer" placeholder="Add number" style="width: 200px;"></center>
+											<center><input class="form-control" type="integer" placeholder="Add number" id="rnfb" style="width: 200px;"></center>
 										
 										</div>
 				
@@ -228,7 +228,7 @@
 								<form>
 									<div class="container text-center">
 										<label for="input-res-basement-num" class="col-form-label col-form-label-lg text-center">Number of Basements in the Building</label>	
-											<center><input class="form-control" type="integer" placeholder="Add number" style="width: 200px;"></center>
+											<center><input class="form-control" type="integer" placeholder="Add number" id="rnbb" style="width: 200px;"></center>
 										
 										</div>
 				
@@ -279,10 +279,10 @@
 								</form>
 							</div>
 							<div class="pt-4" id="com-cages-num">
-								<form>
+								<form id="number-of-cages">
 									<div class="container text-center">
 										<label for="input-com-cages-num" class="col-form-label col-form-label-lg text-center">Number of Elevator Cages to be Deployed</label>	
-											<center><input class="form-control" type="integer" placeholder="Add number" style="width: 200px;"></center>
+											<center><input class="form-control" id="com-cage-num" type="text" placeholder="Add number"  value="" style="width: 200px;"></center>
 										
 										</div>
 				
@@ -296,7 +296,7 @@
 								<form>
 									<div class="container text-center">
 										<label for="input-company-number" class="col-form-label col-form-label-lg text-center">Number of Separate Tenant Companies in the Building</label>	
-											<center><input class="form-control" type="integer" placeholder="Add number" style="width: 200px;"></center>
+											<center><input class="form-control"  type="integer" placeholder="Add number" id="cnstc" style="width: 200px;"></center>
 										
 										</div>
 				
@@ -306,7 +306,7 @@
 								<form>
 									<div class="container text-center">
 										<label for="input-corp-floor-num" class="col-form-label col-form-label-lg text-center">Number of Floors in the Building</label>	
-											<center><input class="form-control" type="integer" placeholder="Add number" style="width: 200px;"></center>
+											<center><input class="form-control" type="integer" placeholder="Add number" id="cnfb" style="width: 200px;"></center>
 										
 										</div>
 				
@@ -316,7 +316,7 @@
 								<form>
 									<div class="container text-center">
 										<label for="input-corp-basement-num" class="col-form-label col-form-label-lg text-center">Number of Basements in the Building</label>	
-											<center><input class="form-control" type="integer" placeholder="Add number" style="width: 200px;"></center>
+											<center><input class="form-control" type="integer" placeholder="Add number" id="cnbb" style="width: 200px;"></center>
 										
 										</div>
 				
@@ -326,7 +326,7 @@
 								<form>
 									<div class="container text-center">
 										<label for="input-corp-parking-num" class="col-form-label col-form-label-lg text-center">Total Available Parking Space</label>	
-											<center><input class="form-control" type="integer" placeholder="Add number" style="width: 200px;"></center>
+											<center><input class="form-control" type="integer" placeholder="Add number" id="caps" style="width: 200px;"></center>
 										
 										</div>
 				
@@ -336,7 +336,7 @@
 								<form>
 									<div class="container text-center">
 										<label for="input-corp-occupant-num" class="col-form-label col-form-label-lg text-center">Maximum Number of Occupants per Floor</label>	
-											<center><input class="form-control" type="integer" placeholder="Add number" style="width: 200px;"></center>
+											<center><input class="form-control" type="integer" placeholder="Add number" id="cnof" style="width: 200px;"></center>
 										
 										</div>
 				
@@ -350,7 +350,7 @@
 								<form>
 									<div class="container text-center">
 										<label for="input-hyb-business-number" class="col-form-label col-form-label-lg text-center">Number of Distinct Businesses in the Building</label>	
-											<center><input class="form-control" type="integer" placeholder="Add number" style="width: 200px;"></center>
+											<center><input class="form-control" id="hdbb" type="integer" placeholder="Add number" style="width: 200px;"></center>
 										
 										</div>
 				
@@ -361,7 +361,7 @@
 								<form>
 									<div class="container text-center">
 										<label for="input-hyb-floor-num" class="col-form-label col-form-label-lg text-center">Number of Floors in the Building</label>	
-											<center><input class="form-control" type="integer" placeholder="Add number" style="width: 200px;"></center>
+											<center><input class="form-control" id="hnfb" type="integer" placeholder="Add number" style="width: 200px;"></center>
 										
 										</div>
 				
@@ -371,7 +371,7 @@
 								<form>
 									<div class="container text-center">
 										<label for="input-hyb-basement-num" class="col-form-label col-form-label-lg text-center">Number of Basements in the Building</label>	
-											<center><input class="form-control" type="integer" placeholder="Add number" style="width: 200px;"></center>
+											<center><input class="form-control" id="hnbb" type="integer" placeholder="Add number" style="width: 200px;"></center>
 										
 										</div>
 				
@@ -381,7 +381,7 @@
 								<form>
 									<div class="container text-center">
 										<label for="input-hyb-parking-num" class="col-form-label col-form-label-lg text-center">Total Available Parking Space</label>	
-											<center><input class="form-control" type="integer" placeholder="Add number" style="width: 200px;"></center>
+											<center><input class="form-control" id="hpsb" type="integer" placeholder="Add number" style="width: 200px;"></center>
 										
 										</div>
 				
@@ -391,7 +391,7 @@
 								<form>
 									<div class="container text-center">
 										<label for="input-hyb-occupant-num" class="col-form-label col-form-label-lg text-center">Maximum Number of Occupants per Floor</label>	
-											<center><input class="form-control" type="integer" placeholder="Add number" style="width: 200px;"></center>
+											<center><input class="form-control" id="hofb" type="integer" placeholder="Add number" style="width: 200px;"></center>
 										
 										</div>
 				
@@ -401,20 +401,30 @@
 								<form>
 									<div class="container text-center">
 										<label for="input-hyb-active-time-num" class="col-form-label col-form-label-lg text-center">Total Hours of Activity in the Building (Maximum:24)</label>	
-											<center><input class="form-control" type="integer" placeholder="Add number" style="width: 200px;"></center>
+											<center><input class="form-control" id="hhab" type="integer" placeholder="Add number"  min="1" max="24" style="width: 200px;"></center>
 										
 										</div>
 				
 								</form>
-							</div>
+							
 
 						</div>
 
 
+
 					</div>
+
+				</div>
+				
+				<div class="container text-center">
+					<div class="">
+						<a class="btn btn-primary btn-lg text-center" >Submit<i class="center"></i></a>
+					</div>
+				</div>
+
 				<div class="container text-center">
 					<label for="lift-cage-num-estimate"  class="col-form-label col-form-label-lg text-center"> Estimated Number of Lift Cages Needed</label>
-					<center><input class="form-control" type="integer" placeholder="" style="width: 200px;" readonly></center>
+					<center><input class="inputBox"disabled id="cage-num-estimate" type="integer"  placeholder="Estimated Number"  style="width: 200px;" readonly></center>
 
 				</div>
 					
@@ -673,7 +683,7 @@
 						<span class="input-group-addon"><i class="fa fa-envelope"></i></span>
 						<input type="email" id="email" name="email" class="form-control required" placeholder="Enter your Email">
 						<span class="input-group-btn">
-							<button class="btn btn-success" type="submit">Subscribe</button>
+							<button class="btn btn-success" type="submit" onclick="resCalcEst()" id="submit-btn">Subscribe</button>
 						</span>
 					</div>
 				</form>
@@ -725,7 +735,12 @@
 
 		<script src="assets/js/scripts.js"></script>
 		
-		<script src="assets/js/form.js"></script>
+		<script src="assets/js/formhider.js"></script>
+
+		<script src="assets/js/calculations.js"></script>
+
+		
+		
 
 	
 </html>

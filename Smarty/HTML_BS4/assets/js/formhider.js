@@ -3,12 +3,7 @@
   function showDiv(select){
     if(select.value==0){
         document.getElementById("residential-form-group").style.display = "none";
-        document.getElementById("commercial-form-group").style.display = "none";
-        document.getElementById("corporate-form-group").style.display = "none";
-        document.getElementById("hybrid-form-group").style.display = "none";
     }
-        
-   
     if(select.value==1){
      document.getElementById("residential-form-group").style.display = "block";
     } else{
@@ -19,14 +14,29 @@
     } else{
         document.getElementById("commercial-form-group").style.display = "none";
     }
-        if(select.value==3){
+    if(select.value==3){
             document.getElementById("corporate-form-group").style.display = "block";
-        } else{
-            document.getElementById("corporate-form-group").style.display = "none";
-     }   if(select.value==4){
+    } else{
+        document.getElementById("corporate-form-group").style.display = "none";
+     }  
+     if(select.value==4){
         document.getElementById("hybrid-form-group").style.display = "block";
     } else{
         document.getElementById("hybrid-form-group").style.display = "none";
- } 
- } 
+    }  
+}
+
+
+    
  
+
+
+
+ 
+ 
+
+ 
+
+
+ 
+     
