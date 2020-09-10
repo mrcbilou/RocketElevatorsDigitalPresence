@@ -46,14 +46,26 @@ var comCagesNumber = parseInt(document.getElementById("input-com-cages-num").val
 
 // Functions
 
-// Residential Function
+// Residential Function *******
 
 function calculateTotalResCage() 
 {
-    var resCageNum = Math.round(parseInt(document.getElementById("input-res-app-number").value/6));
-    var numFloorColumns =  Math.round(parseInt(document.getElementById("input-res-floor-num").value/20)+1);
+    var resAppNum = parseInt(document.getElementById("input-res-app-number").value);
+    var resFloorAppartements = parseInt(document.getElementById("input-res-floor-num").value);
+    var resBasementNum = parseInt(document.getElementById("input-res-basement-num").value);
 
-    document.getElementById("lift-cage-num-estimate").value = resCageNum * numFloorColumns;
+    var totalResNumFloor = resFloorAppartements - resBasementNum;
+
+    var avgAppPerFloor = Math.ceil(resAppNum/totalResNumFloor);
+    var resNumberShafts = Math.ceil(avgAppPerFloor/6);
+    var resNumberColumns = Math.ceil(totalResNumFloor/20);
+    var totalResCages = resNumberShafts * resNumberColumns;
+    
+    if(isNaN(totalResCages)){
+        totalResCages = 0;
+    }
+  
+    document.getElementById("lift-cage-num-estimate").value = totalResCages;
 }
 
 
@@ -81,7 +93,7 @@ function calculateTotalHybCage(){
     var hybNumElevatorPerColumns = hybRequiredElevator / hybNumColumns;
     var hybTotalNumberofElevator = hybNumElevatorPerColumns * hybNumColumns;
 
-    document.getElementById("lift-cage-num-estimate").value = Math.round(hybTotalNumberofElevator);
+    document.getElementById("lift-cage-num-estimate").value = Math.ceil(hybTotalNumberofElevator);
 
 }
 
@@ -97,7 +109,7 @@ function calculateTotalCorpCage(){
     var corpNumElevatorPerColumns = corpRequiredElevator / corpNumColumns;
     var corpTotalNumberofElevator = corpNumElevatorPerColumns * corpNumColumns;
 
-    document.getElementById("lift-cage-num-estimate").value = Math.round(corpTotalNumberofElevator);
+    document.getElementById("lift-cage-num-estimate").value = Math.ceil(corpTotalNumberofElevator);
 
 }
 
@@ -111,11 +123,11 @@ function calculateTotalStandardEstimatedCost(){
     
     var totalStandardPrice = standardUnitPrice + standardInstallFee;
     
-        document.getElementById("unit-price-show").value = Math.round(standardUnitPrice) + "$";
+        document.getElementById("unit-price-show").value = standardUnitPrice.toFixed(2) + "$";
 
-        document.getElementById("install-fee-show").value = Math.round(standardInstallFee) + "$";
+        document.getElementById("install-fee-show").value = standardInstallFee.toFixed(2) + "$";
 
-        document.getElementById("estimate-cost-show").value = Math.round(totalStandardPrice) + "$";
+        document.getElementById("estimate-cost-show").value = totalStandardPrice.toFixed(2) + "$";
        
     
 }   
@@ -129,11 +141,11 @@ function calculateTotalPremiumEstimatedCost(){
    
     var totalPremiumPrice = premiumUnitPrice + premiumInstallFee;
     
-        document.getElementById("unit-price-show").value = Math.round(premiumUnitPrice) + "$";
+        document.getElementById("unit-price-show").value = premiumUnitPrice.toFixed(2) + "$";
 
-        document.getElementById("install-fee-show").value = Math.round(premiumInstallFee) + "$";
+        document.getElementById("install-fee-show").value = premiumInstallFee.toFixed(2) + "$";
 
-        document.getElementById("estimate-cost-show").value =Math.round(totalPremiumPrice) + "$";
+        document.getElementById("estimate-cost-show").value =totalPremiumPrice.toFixed(2) + "$";
         
     
    
@@ -148,11 +160,11 @@ function calculateTotalExcelEstimatedCost(){
 
     var totalExceliumPrice = exceliumUnitPrice + exceliumInstallFee;
  
-        document.getElementById("unit-price-show").value = Math.round(exceliumUnitPrice) + "$";
+        document.getElementById("unit-price-show").value = exceliumUnitPrice.toFixed(2) + "$";
 
-        document.getElementById("install-fee-show").value = Math.round(exceliumInstallFee) + "$";
+        document.getElementById("install-fee-show").value = exceliumInstallFee.toFixed(2) + "$";
 
-        document.getElementById("estimate-cost-show").value =Math.round(totalExceliumPrice) + "$";
+        document.getElementById("estimate-cost-show").value =totalExceliumPrice.toFixed(2) + "$";
 
         
     
