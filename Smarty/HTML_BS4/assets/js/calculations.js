@@ -102,9 +102,10 @@ function calculateTotalCorpCage(){
 }
 
 //standard service calculation
-function calculateTotalEstimatedCost(){
-    var totalNumberElevatorCage = Math.round(parseInt(document.getElementById("lift-cage-num-estimate").value));
-    var standardUnitPrice = totalNumberElevatorCage * 7565;
+function calculateTotalStandardEstimatedCost(){
+    var totalNumberStandardElevatorCage = Math.round(parseInt(document.getElementById("lift-cage-num-estimate").value));
+
+    var standardUnitPrice = totalNumberStandardElevatorCage * 7565;
    
     var standardInstallFee = standardUnitPrice * 0.1;
     
@@ -119,10 +120,10 @@ function calculateTotalEstimatedCost(){
     
 }   
 //premium service installation
-function calculateTotalEstimatedCost(){
-    var totalNumberElevatorCage = Math.round(parseInt(document.getElementById("lift-cage-num-estimate").value));
+function calculateTotalPremiumEstimatedCost(){
+    var totalNumberPremiumElevatorCage = Math.round(parseInt(document.getElementById("lift-cage-num-estimate").value));
     
-    var premiumUnitPrice = totalNumberElevatorCage * 12345;
+    var premiumUnitPrice = totalNumberPremiumElevatorCage * 12345;
     
     var premiumInstallFee = premiumUnitPrice * 0.13;
    
