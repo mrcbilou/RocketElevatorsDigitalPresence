@@ -6,6 +6,9 @@
 		<meta name="description" content="" />
 		<meta name="Author" content="Dorin Grigoras [www.stepofweb.com]" />
 
+		<!--favicon-->
+		<link rel="icon" type="image/png" href="/custom_images/favicon.png" />
+
 		<!-- mobile settings -->
 		<meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0" />
 		<!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
@@ -89,7 +92,7 @@
 						</button>
 
 						<!-- Logo -->
-						<a class="logo float-left scrollTo" href="#top">
+						<a class="logo float-left" href="index.html">
 							<img src="assets/images/logo/R2.png" alt="" />
 						</a>
 
@@ -157,7 +160,7 @@
 
 
 			<!-- HOME -->
-			<section id="slider" class="fullheight" style="background:url('custom_images/1200x800/signature.jpg">
+			<section id="slider" class="fullheight" style="background-image: url(custom_images/1200x800/signature.jpg);">
 				<div class="overlay dark-5"><!-- dark overlay [1 to 9 opacity] --></div>
 
 				<div class="display-table">
@@ -179,7 +182,7 @@
 
 
 			<!-- QUOTE -->
-			<section id="form-section" class="">
+			
 				<div class="row"></div>
 
 							<header class="text-center">
@@ -192,7 +195,7 @@
 									<div class="container text-center">
 										<label for="input-building-type" class="col-form-label col-form-label-lg text-center">Select your Building Type</label>	
 
-											<select id="input-building-type" tabindex="5" onchange="showDiv(this)">
+											<select id="input-building-type" tabindex="5" style="width:fit-content ; height: fit-content;"onchange="showDiv(this)">
 												<option value="0" selected disabled > Choose a Building Type</option>
 												<option value="1">Residential</option>
 												<option value="2">Commercial</option>
@@ -203,7 +206,7 @@
 				
 								</form>
 							</div>
-						<div id="residential-form-group" style = "display:none">
+						<div id="residential-form-group" style ="display:none">
 							<div class="pt-4" id="apartments-num">
 								<form>
 									<div class="container text-center">
@@ -420,7 +423,7 @@
 
 				<div class="container text-center">
 					<label for="lift-cage-num-estimate"  class="col-form-label col-form-label-lg text-center"> Estimated Number of Lift Cages Needed</label>
-					<center><input class="inputBox" id="lift-cage-num-estimate" type="integer"  placeholder="Estimated Number"  value="" style="width: 200px;" readonly></center>
+					<center><input class="inputBox" id="lift-cage-num-estimate" placeholder="Estimated Number"  value="" style="width: 200px;" readonly></center>
 
 				</div>
 				<section>
@@ -463,7 +466,7 @@
 					
 
 				</section>
-			</section>
+			
 			
 			
 		
@@ -561,18 +564,18 @@
 				<!-- Newsletter Form -->
 				<p>Subscribe to Our Newsletter to get Important News & Offers</p>
 
-				<form class="validate" action="php/newsletter.php" method="post" data-success="Subscribed! Thank you!" data-toastr-position="bottom-right">
+				<form class="validate" action=""  data-success="Subscribed! Thank you!" data-toastr-position="bottom-right">
 					<div class="input-group">
 						<span class="input-group-addon"><i class="fa fa-envelope"></i></span>
 						<input type="email" id="email" name="email" class="form-control required" placeholder="Enter your Email">
-						<span class="input-group-btn">
-							<button class="btn btn-success" type="submit" onclick="resCalcEst()" id="submit-btn">Subscribe</button>
+						<span class="input-group-btn ">
+							<button class="btn btn-success" type="submit" onclick="" id="submit-btn">Subscribe</button>
 						</span>
 					</div>
+					
 				</form>
+				
 				<!-- /Newsletter Form -->
-
-
 			</div>
 			<!-- /col #2 -->
 
@@ -580,6 +583,8 @@
 
 
 	</div>
+	
+
 
 	<div class="copyright">
 		<div class="container">
@@ -614,6 +619,7 @@
 
 		<!-- JAVASCRIPT FILES -->
 		<script>var plugin_path = 'assets/plugins/';</script>
+
 		<script src="assets/plugins/jquery/jquery-3.3.1.min.js"></script>
 
 		<script src="assets/js/scripts.js"></script>
@@ -622,6 +628,7 @@
 
 		<script src="assets/js/calculations.js"></script>
 
+		
 		
 		
 

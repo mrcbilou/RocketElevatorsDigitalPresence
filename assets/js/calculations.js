@@ -43,7 +43,6 @@ var comCagesNumber = parseInt(document.getElementById("input-com-cages-num").val
 //calculations variables
 
 
-
 // Functions
 
 // Residential Function *******
