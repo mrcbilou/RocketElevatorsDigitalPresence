@@ -74,6 +74,7 @@ function getInputValue(){
     var inputVal = $("#input-com-cages-num").val();
     var numberCage = parseInt(inputVal,10);
     $("#lift-cage-num-estimate").val(numberCage);
+    calculateTotalStandardEstimatedCost();
 }
 
 

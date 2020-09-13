@@ -1133,9 +1133,9 @@
 							</div><!-- /Alert Mandatory -->
 
 
-							<form action="" method="post" enctype="multipart/form-data">
+							<form >
 								<fieldset>
-									<input type="hidden" name="action" value="contact_send" />
+									
 
 									<div class="row">
 											<div class="col-md-4">
@@ -1176,14 +1176,14 @@
 								</div>
 									<div class="row">
 											<div class="col-md-12">
-												<label for="contact:message">Project Description *</label>
-												<textarea required maxlength="10000" rows="8" class="form-control" name="contact[message]" id="contact:message"></textarea>
+												<label for="contact:project">Project Description *</label>
+												<textarea required maxlength="10000" rows="8" class="form-control" name="contact[message]" id="contact:project"></textarea>
 											</div>
 									</div>
 									<div class="row">
 										<div class="col-md-12">
 											<label for="contact:message">Message *</label>
-											<textarea required maxlength="10000" rows="8" class="form-control" name="contact[message]" id="contact:message"></textarea>
+											<textarea  maxlength="10000" rows="8" class="form-control" name="contact[message]" id="contact:message"></textarea>
 										</div>
 								</div>
 									<div class="row">
@@ -1201,7 +1201,7 @@
 
 								<div class="row">
 									<div class="col-md-12">
-										<button type="submit" class="btn btn-primary"><i class="fa fa-check"></i> SEND MESSAGE</button>
+										<button  onclick="thankYouMessage()" class="btn btn-primary"><i class=""></i> SEND MESSAGE</button>
 									</div>
 								</div>
 							</form>
@@ -1281,12 +1281,12 @@
 							<!-- Newsletter Form -->
 							<p>Subscribe to Our Newsletter to get Important News & Offers</p>
 
-							<form class="validate"   data-success="Subscribed! Thank you!" data-toastr-position="bottom-right">
+							<form class="validate"  onsubmit="required()" action="#"data-success="Subscribed! Thank you!" data-toastr-position="bottom-right">
 								<div class="input-group">
 									<span class="input-group-addon"><i class="fa fa-envelope"></i></span>
-									<input type="email" id="email" name="email" class="form-control required" placeholder="Enter your Email">
+									<input type="email" id="email" name="email [required]" onchange="" class="form-control required" placeholder="Enter your Email">
 									<span class="input-group-btn">
-										<button class="btn btn-success" onclick="" type="submit">Subscribe</button>
+										<button class="btn btn-success"  type="submit">Subscribe</button>
 									</span>
 								</div>
 							</form>
@@ -1334,7 +1334,7 @@
 		<!-- JAVASCRIPT FILES -->
 		<script>var plugin_path = 'assets/plugins/';</script>
 		<script src="assets/plugins/jquery/jquery-3.3.1.min.js"></script>
-
+		<script src="assets/js/alerts.js"></script>
 		<script src="assets/js/scripts.js"></script>
 
 
@@ -1375,5 +1375,6 @@
 			}) */
 
 		</script>
+
 	</body>
 </html>

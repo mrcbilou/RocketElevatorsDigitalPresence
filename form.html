@@ -211,7 +211,7 @@
 								<form>
 									<div class="container text-center">
 										<label for="input-res-app-number" class="col-form-label col-form-label-lg text-center">Number of Apartments in the Building</label>	
-											<center><input class="form-control" type="integer" placeholder="Add number"  onchange="calculateTotalResCage()" id="input-res-app-number" style="width: 200px;" ></center>
+											<center><input class="form-control" type="integer" placeholder="Add number"  onchange="calculateTotalResCage() ; calculateTotalStandardEstimatedCost() " id="input-res-app-number" style="width: 200px;" ></center>
 										
 										</div>
 				
@@ -221,7 +221,7 @@
 								<form>
 									<div class="container text-center">
 										<label for="input-res-floor-num" class="col-form-label col-form-label-lg text-center">Number of Floors in the Building</label>	
-											<center><input class="form-control" type="integer"  onchange="calculateTotalResCage()" placeholder="Add number" id="input-res-floor-num" style="width: 200px;"></center>
+											<center><input class="form-control" type="integer"  onchange="calculateTotalResCage() ; calculateTotalStandardEstimatedCost()" placeholder="Add number" id="input-res-floor-num" style="width: 200px;"></center>
 										
 										</div>
 				
@@ -231,7 +231,7 @@
 								<form>
 									<div class="container text-center">
 										<label for="input-res-basement-num" class="col-form-label col-form-label-lg text-center">Number of Basements in the Building</label>	
-											<center><input class="form-control" type="integer" placeholder="Add number" onchange="calculateTotalResCage()" id="input-res-basement-num" style="width: 200px;"></center>
+											<center><input class="form-control" type="integer" placeholder="Add number" onchange="calculateTotalResCage() ; calculateTotalStandardEstimatedCost()" id="input-res-basement-num" style="width: 200px;"></center>
 										
 										</div>
 				
@@ -285,7 +285,7 @@
 								<form id="number-of-cages">
 									<div class="container text-center">
 										<label for="input-com-cages-num" class="col-form-label col-form-label-lg text-center">Number of Elevator Cages to be Deployed</label>	
-											<center><input class="form-control" id="input-com-cages-num" type="text" placeholder="Add number"  value="" style="width: 200px;"></center>
+											<center><input class="form-control" id="input-com-cages-num" onchange="" type="text" placeholder="Add number"  value="" style="width: 200px;"></center>
 										
 										</div>
 				
@@ -299,7 +299,7 @@
 								<form>
 									<div class="container text-center">
 										<label for="input-corp-company-number" class="col-form-label col-form-label-lg text-center">Number of Separate Tenant Companies in the Building</label>	
-											<center><input class="form-control" onchange="calculateTotalCorpCage()" type="integer" placeholder="Add number" id="input-corp-company-number" style="width: 200px;"></center>
+											<center><input class="form-control" onchange="calculateTotalCorpCage() ; calculateTotalStandardEstimatedCost()" type="integer" placeholder="Add number" id="input-corp-company-number" style="width: 200px;"></center>
 										
 										</div>
 				
@@ -309,7 +309,7 @@
 								<form>
 									<div class="container text-center">
 										<label for="input-corp-floor-num" class="col-form-label col-form-label-lg text-center">Number of Floors in the Building</label>	
-											<center><input class="form-control" onchange="calculateTotalCorpCage()" type="integer" placeholder="Add number" id="input-corp-floor-num" style="width: 200px;"></center>
+											<center><input class="form-control" onchange="calculateTotalCorpCage() ; calculateTotalStandardEstimatedCost()" type="integer" placeholder="Add number" id="input-corp-floor-num" style="width: 200px;"></center>
 										
 										</div>
 				
@@ -319,7 +319,7 @@
 								<form>
 									<div class="container text-center">
 										<label for="input-corp-basement-num" class="col-form-label col-form-label-lg text-center">Number of Basements in the Building</label>	
-											<center><input class="form-control" type="integer" onchange="calculateTotalCorpCage()" placeholder="Add number" id="input-corp-basement-num" style="width: 200px;"></center>
+											<center><input class="form-control" type="integer" onchange="calculateTotalCorpCage() ; calculateTotalStandardEstimatedCost()" placeholder="Add number" id="input-corp-basement-num" style="width: 200px;"></center>
 										
 										</div>
 				
@@ -329,7 +329,7 @@
 								<form>
 									<div class="container text-center">
 										<label for="input-corp-parking-num" class="col-form-label col-form-label-lg text-center">Total Available Parking Space</label>	
-											<center><input class="form-control" type="integer" onchange="calculateTotalCorpCage()" placeholder="Add number" id="input-corp-parking-num" style="width: 200px;"></center>
+											<center><input class="form-control" type="integer" onchange="calculateTotalCorpCage(); calculateTotalStandardEstimatedCost()" placeholder="Add number" id="input-corp-parking-num" style="width: 200px;"></center>
 										
 										</div>
 				
@@ -339,7 +339,7 @@
 								<form>
 									<div class="container text-center">
 										<label for="input-corp-occupant-num" class="col-form-label col-form-label-lg text-center">Maximum Number of Occupants per Floor</label>	
-											<center><input class="form-control" type="integer" onchange="calculateTotalCorpCage()" placeholder="Add number" id="input-corp-occupant-num" style="width: 200px;"></center>
+											<center><input class="form-control" type="integer" onchange="calculateTotalCorpCage(); calculateTotalStandardEstimatedCost()" placeholder="Add number" id="input-corp-occupant-num" style="width: 200px;"></center>
 										
 										</div>
 				
@@ -353,7 +353,7 @@
 								<form>
 									<div class="container text-center">
 										<label for="input-hyb-business-number" class="col-form-label col-form-label-lg text-center">Number of Distinct Businesses in the Building</label>	
-											<center><input class="form-control" id="input-hyb-business-number" onchange="calculateTotalHybCage()" type="integer" placeholder="Add number" style="width: 200px;"></center>
+											<center><input class="form-control" id="input-hyb-business-number" onchange="calculateTotalHybCage(); calculateTotalStandardEstimatedCost()" type="integer" placeholder="Add number" style="width: 200px;"></center>
 										
 										</div>
 				
@@ -364,7 +364,7 @@
 								<form>
 									<div class="container text-center">
 										<label for="input-hyb-floor-num" class="col-form-label col-form-label-lg text-center">Number of Floors in the Building</label>	
-											<center><input class="form-control" id="input-hyb-floor-num" type="integer" onchange="calculateTotalHybCage()" placeholder="Add number" style="width: 200px;"></center>
+											<center><input class="form-control" id="input-hyb-floor-num" type="integer" onchange="calculateTotalHybCage(); calculateTotalStandardEstimatedCost()" placeholder="Add number" style="width: 200px;"></center>
 										
 										</div>
 				
@@ -374,7 +374,7 @@
 								<form>
 									<div class="container text-center">
 										<label for="input-hyb-basement-num" class="col-form-label col-form-label-lg text-center">Number of Basements in the Building</label>	
-											<center><input class="form-control" id="input-hyb-basement-num" type="integer" onchange="calculateTotalHybCage()" placeholder="Add number" style="width: 200px;"></center>
+											<center><input class="form-control" id="input-hyb-basement-num" type="integer" onchange="calculateTotalHybCage(); calculateTotalStandardEstimatedCost()" placeholder="Add number" style="width: 200px;"></center>
 										
 										</div>
 				
@@ -384,7 +384,7 @@
 								<form>
 									<div class="container text-center">
 										<label for="input-hyb-parking-num" class="col-form-label col-form-label-lg text-center">Total Available Parking Space</label>	
-											<center><input class="form-control" id="input-hyb-parking-num" type="integer" onchange="calculateTotalHybCage()" placeholder="Add number" style="width: 200px;"></center>
+											<center><input class="form-control" id="input-hyb-parking-num" type="integer" onchange="calculateTotalHybCage(); calculateTotalStandardEstimatedCost()" placeholder="Add number" style="width: 200px;"></center>
 										
 										</div>
 				
@@ -394,7 +394,7 @@
 								<form>
 									<div class="container text-center">
 										<label for="input-hyb-occupant-num" class="col-form-label col-form-label-lg text-center">Maximum Number of Occupants per Floor</label>	
-											<center><input class="form-control" id="input-hyb-occupant-num" type="integer" onchange="calculateTotalHybCage()" placeholder="Add number" style="width: 200px;"></center>
+											<center><input class="form-control" id="input-hyb-occupant-num" type="integer" onchange="calculateTotalHybCage(); calculateTotalStandardEstimatedCost()" placeholder="Add number" style="width: 200px;"></center>
 										
 										</div>
 				
@@ -404,7 +404,7 @@
 								<form>
 									<div class="container text-center">
 										<label for="input-hyb-active-time-num" class="col-form-label col-form-label-lg text-center">Total Hours of Activity in the Building (Maximum:24)</label>	
-											<center><input class="form-control" id="input-hyb-active-time-num" type="integer" onchange="calculateTotalHybCage()" placeholder="Add number"  min="1" max="24" style="width: 200px;"></center>
+											<center><input class="form-control" id="input-hyb-active-time-num" type="integer" onchange="calculateTotalHybCage(); calculateTotalStandardEstimatedCost()" placeholder="Add number"  min="1" max="24" style="width: 200px;"></center>
 										
 										</div>
 				
@@ -423,7 +423,7 @@
 
 				<div class="container text-center">
 					<label for="lift-cage-num-estimate"  class="col-form-label col-form-label-lg text-center"> Estimated Number of Lift Cages Needed</label>
-					<center><input class="inputBox" id="lift-cage-num-estimate" placeholder="Estimated Number"  value="" style="width: 200px;" readonly></center>
+					<center><input class="inputBox" id="lift-cage-num-estimate" placeholder="Estimated Number"  value=""  style="width: 200px;" readonly></center>
 
 				</div>
 				<section>
@@ -564,15 +564,14 @@
 				<!-- Newsletter Form -->
 				<p>Subscribe to Our Newsletter to get Important News & Offers</p>
 
-				<form class="validate" action=""  data-success="Subscribed! Thank you!" data-toastr-position="bottom-right">
+				<form class="validate"  onsubmit="required()" action="#" data-success="Subscribed! Thank you!" data-toastr-position="bottom-right">
 					<div class="input-group">
 						<span class="input-group-addon"><i class="fa fa-envelope"></i></span>
-						<input type="email" id="email" name="email" class="form-control required" placeholder="Enter your Email">
-						<span class="input-group-btn ">
-							<button class="btn btn-success" type="submit" onclick="" id="submit-btn">Subscribe</button>
+						<input type="email" id="email" name="email [required]" onchange="" class="form-control required" placeholder="Enter your Email">
+						<span class="input-group-btn">
+							<button class="btn btn-success"  type="submit">Subscribe</button>
 						</span>
 					</div>
-					
 				</form>
 				
 				<!-- /Newsletter Form -->
@@ -619,7 +618,7 @@
 
 		<!-- JAVASCRIPT FILES -->
 		<script>var plugin_path = 'assets/plugins/';</script>
-
+		<script src="assets/js/alerts.js"></script>
 		<script src="assets/plugins/jquery/jquery-3.3.1.min.js"></script>
 
 		<script src="assets/js/scripts.js"></script>
