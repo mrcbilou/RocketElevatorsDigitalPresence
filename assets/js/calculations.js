@@ -129,6 +129,7 @@ function calculateTotalStandardEstimatedCost(){
 
         document.getElementById("estimate-cost-show").value = totalStandardPrice.toFixed(2) + "$";
        
+       
     
 }   
 //premium service installation
@@ -147,7 +148,7 @@ function calculateTotalPremiumEstimatedCost(){
 
         document.getElementById("estimate-cost-show").value =totalPremiumPrice.toFixed(2) + "$";
         
-    
+        
    
 }   
 // excelium service installation
@@ -167,6 +168,33 @@ function calculateTotalExcelEstimatedCost(){
         document.getElementById("estimate-cost-show").value =totalExceliumPrice.toFixed(2) + "$";
 
         
+        
     
 }   
+// Reset All Fields on Building Selection Change
+function formReset(){
+ 
+document.getElementById("input-res-app-number").value="";
+document.getElementById("input-res-floor-num").value="";
+document.getElementById("input-res-basement-num").value="";
+document.getElementById("input-corp-company-number").value="";
+document.getElementById("input-corp-floor-num").value="";
+document.getElementById("input-corp-basement-num").value="";
+document.getElementById("input-corp-parking-num").value="";
+document.getElementById("input-corp-occupant-num").value="";
+document.getElementById("input-hyb-business-number").value="";
+document.getElementById("input-hyb-floor-num").value="";
+document.getElementById("input-hyb-basement-num").value="";
+document.getElementById("input-hyb-parking-num").value="";
+document.getElementById("input-hyb-occupant-num").value="";
+document.getElementById("input-hyb-active-time-num").value="";
+document.getElementById("input-com-cages-num").value="";
+document.getElementById("input-com-business-number").value="";
+document.getElementById("input-com-floor-num").value="";
+document.getElementById("input-com-basement-num").value="";
+document.getElementById("input-com-parking-num").value="";
+document.getElementById("unit-price-show").value="";
+document.getElementById("install-fee-show").value="";
+document.getElementById("estimate-cost-show").value="";
 
+}

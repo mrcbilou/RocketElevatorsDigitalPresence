@@ -195,7 +195,7 @@
 									<div class="container text-center">
 										<label for="input-building-type" class="col-form-label col-form-label-lg text-center">Select your Building Type</label>	
 
-											<select id="input-building-type" tabindex="5" style="width:fit-content ; height: fit-content;"onchange="showDiv(this)">
+											<select id="input-building-type" tabindex="5" style="width:fit-content ; height: fit-content;"onchange="showDiv(this) ; formReset()">
 												<option value= "0" selected disabled > Choose a Building Type</option>
 												<option value="1">Residential</option>
 												<option value="2">Commercial</option>
@@ -208,7 +208,7 @@
 							</div>
 						<div id="residential-form-group" style ="display:none">
 							<div class="pt-4" id="apartments-num">
-								<form>
+								<form id="formResAppNumber">
 									<div class="container text-center">
 										<label for="input-res-app-number" class="col-form-label col-form-label-lg text-center">Number of Apartments in the Building</label>	
 											<center><input class="form-control" type="integer" placeholder="Add number"  onchange="calculateTotalResCage() ; calculateTotalStandardEstimatedCost() " id="input-res-app-number" style="width: 200px;" ></center>
@@ -245,7 +245,7 @@
 								<form>
 									<div class="container text-center">
 										<label for="input-business-number" class="col-form-label col-form-label-lg text-center">Number of Distinct Businesses in the Building</label>	
-											<center><input class="form-control" type="integer" id="input-business-number" placeholder="Add number" style="width: 200px;"></center>
+											<center><input class="form-control" type="integer" id="input-com-business-number" placeholder="Add number" style="width: 200px;"></center>
 										
 										</div>
 				
@@ -626,6 +626,11 @@
 		<script src="assets/js/formhider.js"></script>
 
 		<script src="assets/js/calculations.js"></script>
+
+		<script>
+			number = NaN;
+			if (isNaN(number)) number = 0;
+		</script>
 
 		
 		
