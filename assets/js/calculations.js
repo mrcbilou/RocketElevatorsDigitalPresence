@@ -113,8 +113,17 @@ function calculateTotalCorpCage(){
 
 }
 
+function setDefaultCalculationValue() {
+    document.getElementById("unit-price-show").value = "-";
+    document.getElementById("install-fee-show").value = "-";
+    document.getElementById("estimate-cost-show").value = "-";
+}
+
 //standard service calculation
 function calculateTotalStandardEstimatedCost(){
+    
+    setDefaultCalculationValue();
+
     var totalNumberStandardElevatorCage = Math.round(parseInt(document.getElementById("lift-cage-num-estimate").value));
 
     var standardUnitPrice = totalNumberStandardElevatorCage * 7565;
@@ -123,17 +132,21 @@ function calculateTotalStandardEstimatedCost(){
     
     var totalStandardPrice = standardUnitPrice + standardInstallFee;
     
+    if( !isNaN(standardUnitPrice) ) {
         document.getElementById("unit-price-show").value = standardUnitPrice.toFixed(2) + "$";
-
         document.getElementById("install-fee-show").value = standardInstallFee.toFixed(2) + "$";
-
         document.getElementById("estimate-cost-show").value = totalStandardPrice.toFixed(2) + "$";
-       
+    }    
        
     
 }   
+
+
 //premium service installation
 function calculateTotalPremiumEstimatedCost(){
+
+    setDefaultCalculationValue();
+   
     var totalNumberPremiumElevatorCage = Math.round(parseInt(document.getElementById("lift-cage-num-estimate").value));
     
     var premiumUnitPrice = totalNumberPremiumElevatorCage * 12345;
@@ -141,18 +154,22 @@ function calculateTotalPremiumEstimatedCost(){
     var premiumInstallFee = premiumUnitPrice * 0.13;
    
     var totalPremiumPrice = premiumUnitPrice + premiumInstallFee;
-    
+   
+    if( !isNaN(premiumUnitPrice) ) {
         document.getElementById("unit-price-show").value = premiumUnitPrice.toFixed(2) + "$";
 
         document.getElementById("install-fee-show").value = premiumInstallFee.toFixed(2) + "$";
 
         document.getElementById("estimate-cost-show").value =totalPremiumPrice.toFixed(2) + "$";
-        
+    }
         
    
 }   
 // excelium service installation
 function calculateTotalExcelEstimatedCost(){
+
+    setDefaultCalculationValue();
+
     var totalNumberElevatorCage = Math.round(parseInt(document.getElementById("lift-cage-num-estimate").value));
   
     var exceliumUnitPrice = totalNumberElevatorCage * 15400;
@@ -161,13 +178,14 @@ function calculateTotalExcelEstimatedCost(){
 
     var totalExceliumPrice = exceliumUnitPrice + exceliumInstallFee;
  
+    if( !isNaN(exceliumUnitPrice) ) {
         document.getElementById("unit-price-show").value = exceliumUnitPrice.toFixed(2) + "$";
 
         document.getElementById("install-fee-show").value = exceliumInstallFee.toFixed(2) + "$";
 
         document.getElementById("estimate-cost-show").value =totalExceliumPrice.toFixed(2) + "$";
 
-        
+    }    
         
     
 }   
